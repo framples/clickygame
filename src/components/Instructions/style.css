@@ -1,0 +1,11 @@
+.jumbotron {
+    height: 250px;
+    background-image: url("https://wallpapershome.com/images/pages/pic_h/241.jpg");
+    text-align: center;
+    text-shadow: 2px 1px maroon;
+    color: white;
+    font-variant: small-caps;
+    font-family: Andale Mono, monospace;
+
+    
+}

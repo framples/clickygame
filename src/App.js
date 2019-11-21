@@ -7,7 +7,9 @@ import leaguechamps from "./leaguechamps.json";
 
 class App extends Component {
   state = {
-    leaguechamps
+    leaguechamps,
+    score: 0,
+    topScore: 0
   };
 
   componentDidMount() {
@@ -52,7 +54,7 @@ class App extends Component {
               name={champ.name}
               image={champ.image}
             />
-          ))};
+          ))}
       </Wrapper>
       </div>
     );
