@@ -2,61 +2,73 @@
   {
     "id": 1,
     "name": "Draven",
-    "image": "https://mixm.io/x/164/hd-high-resolution-wallpaper-draven-lol-splash-art-league-of-legends-a1520-4k-8k-flipped-background.jpg"
+    "image": "https://mixm.io/x/164/hd-high-resolution-wallpaper-draven-lol-splash-art-league-of-legends-a1520-4k-8k-flipped-background.jpg",
+    "clicked": false
   },
   {
     "id": 2,
     "name": "Ekko",
-    "image": "http://www.lol-wallpapers.com/wp-content/uploads/2018/05/PROJECT-Ekko-Splash-Art-HD-4k-Wallpaper-Background-Official-Art-Artwork-League-of-Legends-lol.jpg"
+    "image": "http://www.lol-wallpapers.com/wp-content/uploads/2018/05/PROJECT-Ekko-Splash-Art-HD-4k-Wallpaper-Background-Official-Art-Artwork-League-of-Legends-lol.jpg",
+    "clicked": false
   },
   {
     "id": 3,
     "name": "Bard",
-    "image": "http://www.lol-wallpapers.com/wp-content/uploads/2017/05/Classic-Bard-Splash-Art-4k-HD-Wallpaper-Official-Artwork-League-of-Legends-lol-1200x728.jpg"
+    "image": "http://www.lol-wallpapers.com/wp-content/uploads/2017/05/Classic-Bard-Splash-Art-4k-HD-Wallpaper-Official-Artwork-League-of-Legends-lol-1200x728.jpg",
+    "clicked": false
   },
   {
     "id": 4,
     "name": "Senna",
-    "image": "http://waifu.clan.su/_ld/4/61391819.jpg"
+    "image": "http://waifu.clan.su/_ld/4/61391819.jpg",
+    "clicked": false
   },
   {
     "id": 5,
     "name": "Lee",
-    "image": "https://images4.alphacoders.com/817/817016.png"
+    "image": "https://images4.alphacoders.com/817/817016.png",
+    "clicked": false
   },
   {
     "id": 6,
     "name": "Zac",
-    "image": "https://i.ytimg.com/vi/oce4m6vKhaI/maxresdefault.jpg"
+    "image": "https://i.ytimg.com/vi/oce4m6vKhaI/maxresdefault.jpg",
+    "clicked": false
   },
   {
     "id": 7,
     "name": "Jhin",
-    "image": "https://www.larutadelsorigens.cat/wallpic/full/131-1316446_who-blood-moon-jhin-splash-art.jpg"
+    "image": "https://www.larutadelsorigens.cat/wallpic/full/131-1316446_who-blood-moon-jhin-splash-art.jpg",
+    "clicked": false
   },
   {
     "id": 8,
     "name": "Thresh",
-    "image": "http://www.lol-wallpapers.com/wp-content/uploads/2018/08/High-Noon-Thresh-Splash-Art-HD-4k-Wallpaper-Background-Official-Art-Artwork-League-of-Legends-lol-3.jpg"
+    "image": "http://www.lol-wallpapers.com/wp-content/uploads/2018/08/High-Noon-Thresh-Splash-Art-HD-4k-Wallpaper-Background-Official-Art-Artwork-League-of-Legends-lol-3.jpg",
+    "clicked":false
   },
   {
     "id": 9,
     "name": "Zed",
-    "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_10.jpg"
+    "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_10.jpg",
+    "clicked":false
   },
   {
     "id": 10,
     "name": "Pyke",
-    "image": "https://cdnb.artstation.com/p/assets/images/images/010/811/575/large/victor-maury-pyke1850.jpg?1526362960"
+    "image": "https://cdnb.artstation.com/p/assets/images/images/010/811/575/large/victor-maury-pyke1850.jpg?1526362960",
+    "clicked":false
   },
   {
     "id": 11,
     "name": "Vayne",
-    "image": "http://www.lol-wallpapers.com/wp-content/uploads/2018/05/PROJECT-Vayne-Splash-Art-HD-4k-6k-Wallpaper-Background-Official-Art-Artwork-League-of-Legends-lol.jpg"
+    "image": "http://www.lol-wallpapers.com/wp-content/uploads/2018/05/PROJECT-Vayne-Splash-Art-HD-4k-6k-Wallpaper-Background-Official-Art-Artwork-League-of-Legends-lol.jpg",
+    "clicked":false
   },
   {
     "id": 12,
     "name": "Garen",
-    "image": "http://www.lol-wallpapers.com/wp-content/uploads/2018/06/God-King-Garen-Splash-Art-HD-4k-Wallpaper-Background-Official-Art-Artwork-League-of-Legends-lol-3.jpg"
+    "image": "http://www.lol-wallpapers.com/wp-content/uploads/2018/06/God-King-Garen-Splash-Art-HD-4k-Wallpaper-Background-Official-Art-Artwork-League-of-Legends-lol-3.jpg",
+    "clicked":false
   }
 ]

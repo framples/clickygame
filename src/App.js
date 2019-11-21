@@ -10,25 +10,53 @@ class App extends Component {
     leaguechamps
   };
 
-  render () {
+  componentDidMount() {
+    this.setState({
+      leaguechamps: this.shuffle(this.state.leaguechamps)
+    }, () => {
+      console.log("Images shuffled")
+    });
+  };
+
+  clickedOn = id => {
+    console.log(id);
+    this.setState({
+      leaguechamps: this.shuffle(this.state.leaguechamps)
+    });
+  };
+
+  shuffle = (array) => {
+    let indexCurrent = array.length, temporaryValue, randomIndex;
+    while (0 !== indexCurrent) {
+      randomIndex = Math.floor(Math.random() * indexCurrent);
+      indexCurrent -= 1;
+      temporaryValue = array[indexCurrent];
+      array[indexCurrent] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+    return array;
+  };
+
+
+
+  render() {
     return (
-     <div>
-      <Instructions />
-      <Score />
-      <Wrapper>
-        {this.state.leaguechamps.map(champ => (
-          <ChampCard
-          id={champ.id}
-          name={champ.name}
-          image={champ.image}
-          />
-        ))};
+      <div>
+        <Instructions />
+        <Score />
+        <Wrapper>
+          {this.state.leaguechamps.map(champ => (
+            <ChampCard
+              clickedOn={this.clickedOn}
+              id={champ.id}
+              name={champ.name}
+              image={champ.image}
+            />
+          ))};
       </Wrapper>
       </div>
-    )
+    );
   }
-
-  
 }
 
 
