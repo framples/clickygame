@@ -1,5 +1,5 @@
 .card {
-   background: white;
+   background: maroon;
     border-radius: 2px;
     height: px;
     margin: 1rem;
@@ -45,4 +45,5 @@
   .card > .remove:hover {
     color: #d50000;
   }
+
   

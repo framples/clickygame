@@ -9,7 +9,9 @@ class App extends Component {
   state = {
     leaguechamps,
     score: 0,
-    topScore: 0
+    topScore: 0,
+    tracker: [],
+    message: ""
   };
 
   componentDidMount() {
@@ -39,13 +41,36 @@ class App extends Component {
     return array;
   };
 
+  scoreBoard = (id) => {
+    if (this.state.tracker.includes(id)) {
+      this.setState({
+        score: 0,
+        message: "Wah(ducknoise).  Incorrect!",
+        tracker: []
+      });
+    } else {
+      let temporaryValue = this.state.tracker;
+      let topScore = this.state.topScore > this.state.score ? this.state.topScore : this.state.topScore +1;
+      temporaryValue.push(id);
+      this.setState({
+        score: this.state.score + 1,
+        topScore: topScore,
+        message: "Nice!",
+        tracker: temporaryValue
+      });
+    }
+  }
+
 
 
   render() {
     return (
       <div>
-        <Instructions />
         <Score />
+        <Instructions
+        score={this.state.score}
+        topScore={this.state.topScre} />
+        
         <Wrapper>
           {this.state.leaguechamps.map(champ => (
             <ChampCard
@@ -53,6 +78,8 @@ class App extends Component {
               id={champ.id}
               name={champ.name}
               image={champ.image}
+              shuffle={this.shuffle}
+              scoreBoard={this.score}
             />
           ))}
       </Wrapper>
