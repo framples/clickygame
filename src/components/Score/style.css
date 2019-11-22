@@ -1,6 +1,19 @@
-.navbar {
+.scoreboard {
     text-shadow: 2px 1px maroon;
     color: white;
     font-variant: small-caps;
     font-family: Andale Mono, monospace;
+    font-size:100px;
+}
+
+.correctClicks {
+    font-size: 25px;
+}
+
+.clickMessage {
+    font-size: 20px;
+}
+
+.topScore {
+    font-size: 25px;
 }
