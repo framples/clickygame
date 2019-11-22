@@ -5,59 +5,80 @@ import Score from "./components/Score";
 import Wrapper from "./components/Wrapper";
 import leaguechamps from "./leaguechamps.json";
 
+let correctClicks = 0;
+let topScore = 0;
+let clickMessage = "Pick something meta or open mid.";
+
 class App extends Component {
   state = {
     leaguechamps,
-    score: 0,
-    topScore: 0,
-    tracker: [],
-    message: ""
+    clickMessage,
+    topScore,
+    correctClicks
   };
 
-  componentDidMount() {
-    this.setState({
-      leaguechamps: this.shuffle(this.state.leaguechamps)
-    }, () => {
-      console.log("Images shuffled")
-    });
-  };
+  chooseChamp = id => {
+    const leaguechamps = this.state.leaguechamps;
+    const clickedDupe = leaguechamps.filter(leaguechamps => leaguechamps.id === id);
 
-  clickedOn = id => {
-    console.log(id);
-    this.setState({
-      leaguechamps: this.shuffle(this.state.leaguechamps)
-    });
-  };
+    if (clickedDupe[0].clicked) {
+      console.log("Score: " + correctClicks);
+      console.log("Top Score: " + topScore);
 
-  shuffle = (array) => {
-    let indexCurrent = array.length, temporaryValue, randomIndex;
-    while (0 !== indexCurrent) {
-      randomIndex = Math.floor(Math.random() * indexCurrent);
-      indexCurrent -= 1;
-      temporaryValue = array[indexCurrent];
-      array[indexCurrent] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
+      correctClicks = 0;
+      clickMessage = "You picked the same champ twice - get good and start over.";
+
+      for (let i = 0; i < leaguechamps.length; i++) {
+        leaguechamps[i].clicked = false;
+      }
+
+      this.setState({ clickMessage });
+      this.setState({ correctClicks });
+      this.setState({ leaguechamps });
     }
-    return array;
-  };
 
-  scoreBoard = (id) => {
-    if (this.state.tracker.includes(id)) {
-      this.setState({
-        score: 0,
-        message: "Wah(ducknoise).  Incorrect!",
-        tracker: []
-      });
-    } else {
-      let temporaryValue = this.state.tracker;
-      let topScore = this.state.topScore > this.state.score ? this.state.topScore : this.state.topScore +1;
-      temporaryValue.push(id);
-      this.setState({
-        score: this.state.score + 1,
-        topScore: topScore,
-        message: "Nice!",
-        tracker: temporaryValue
-      });
+    else if (correctClicks < 11) {
+      clickedDupe[0].clicked = true;
+
+      correctClicks++;
+
+      clickMessage = "You've been promoted - keep the climb going."
+
+      if (correctClicks > topScore) {
+        topScore = correctClicks;
+        this.setState({ topScore });
+      }
+
+      for (let i = leaguechamps.length-1; i >= 0; i--) {
+        let randomIndex = Math.floor(Math.random() * (i + 1));
+        let itemIndex = leaguechamps[randomIndex];
+        leaguechamps[randomIndex] = leaguechamps[i];
+        leaguechamps[i] = itemIndex;
+        this.setState({ leaguechamps });
+        this.setState({ correctClicks });
+        this.setState({ clickMessage });
+      }
+    }
+    else {
+      clickedDupe[0].clicked = true;
+      correctClicks = 0;
+      clickMessage = "You're better than faker - congratulations!";
+      topScore = 12;
+      this.setState({ topScore });
+
+      for (let i = 0; i < leaguechamps.length; i++) {
+        leaguechamps[i].clicked = false;
+      }
+
+      for (let i = leaguechamps.length - 1; i >= 0; i--) {
+        let randomIndex = Math.floor(Math.random() * (i + 1));
+        let itemIndex = leaguechamps[randomIndex];
+        leaguechamps[randomIndex] = leaguechamps[i];
+        leaguechamps[i] = itemIndex;
+        this.setState({ leaguechamps });
+        this.setState({ correctClicks });
+        this.setState({ clickMessage });
+      }
     }
   }
 
@@ -66,23 +87,25 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Score />
+        <Score 
+          clickMessage={this.state.clickMessage}
+          correctClicks={this.state.correctClicks}
+          topScore={this.state.topScore} />
         <Instructions
-        score={this.state.score}
-        topScore={this.state.topScre} />
-        
+
+        />
+
         <Wrapper>
           {this.state.leaguechamps.map(champ => (
             <ChampCard
-              clickedOn={this.clickedOn}
+              chooseChamp={this.chooseChamp}
               id={champ.id}
+              key={champ.id}
               name={champ.name}
               image={champ.image}
-              shuffle={this.shuffle}
-              scoreBoard={this.score}
             />
           ))}
-      </Wrapper>
+        </Wrapper>
       </div>
     );
   }
