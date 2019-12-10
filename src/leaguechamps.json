@@ -8,13 +8,13 @@
   {
     "id": 2,
     "name": "Ekko",
-    "image": "http://www.lol-wallpapers.com/wp-content/uploads/2018/05/PROJECT-Ekko-Splash-Art-HD-4k-Wallpaper-Background-Official-Art-Artwork-League-of-Legends-lol.jpg",
+    "image": "https://i.ytimg.com/vi/iS7UXJcuKAQ/maxresdefault.jpg",
     "clicked": false
   },
   {
     "id": 3,
     "name": "Bard",
-    "image": "http://www.lol-wallpapers.com/wp-content/uploads/2017/05/Classic-Bard-Splash-Art-4k-HD-Wallpaper-Official-Artwork-League-of-Legends-lol-1200x728.jpg",
+    "image": "https://news-a.akamaihd.net/public/images/pages/2015/breveal/img/Bard_Splash_WP.jpg",
     "clicked": false
   },
   {
@@ -44,7 +44,7 @@
   {
     "id": 8,
     "name": "Thresh",
-    "image": "http://www.lol-wallpapers.com/wp-content/uploads/2018/08/High-Noon-Thresh-Splash-Art-HD-4k-Wallpaper-Background-Official-Art-Artwork-League-of-Legends-lol-3.jpg",
+    "image": "https://pbs.twimg.com/media/DkkN5iWXgAA55_Y.jpg",
     "clicked":false
   },
   {
@@ -62,13 +62,13 @@
   {
     "id": 11,
     "name": "Vayne",
-    "image": "http://www.lol-wallpapers.com/wp-content/uploads/2018/05/PROJECT-Vayne-Splash-Art-HD-4k-6k-Wallpaper-Background-Official-Art-Artwork-League-of-Legends-lol.jpg",
+    "image": "https://cdna.artstation.com/p/assets/images/images/008/416/274/large/chengwei-pan-final-projectvayne-splash-psd.jpg?1512614353",
     "clicked":false
   },
   {
     "id": 12,
     "name": "Garen",
-    "image": "http://www.lol-wallpapers.com/wp-content/uploads/2018/06/God-King-Garen-Splash-Art-HD-4k-Wallpaper-Background-Official-Art-Artwork-League-of-Legends-lol-3.jpg",
+    "image": "https://2.bp.blogspot.com/-hTLlKrwehKU/WyYFT_hB4RI/AAAAAAAAEKQ/3AeN_SWvzGIBfIB0bGfNrE7N6FYaGgtHACLcBGAs/s1600/League-of-Legends-God-King-Garen-Login-Screen.jpg",
     "clicked":false
   }
 ]
